@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Glcv19stats.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="Black">
+
+    <StackLayout>
+        <ActivityIndicator
+            x:Name="activity"
+            HorizontalOptions="CenterAndExpand"
+            IsRunning="True"
+            IsVisible="True"
+            VerticalOptions="CenterAndExpand" />
+
+        <StackLayout x:Name="data" IsVisible="False">
+            <Label
+                x:Name="cases"
+                Padding="0,20,0,0"
+                FontSize="Large"
+                HorizontalOptions="CenterAndExpand"
+                Text="219221"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                x:Name="cases2"
+                FontSize="Header"
+                HorizontalOptions="CenterAndExpand"
+                Text="22123"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                x:Name="date"
+                FontSize="Medium"
+                HorizontalOptions="CenterAndExpand"
+                Text="2020-20-01"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
