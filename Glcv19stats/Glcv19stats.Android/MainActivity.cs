@@ -36,7 +36,11 @@ namespace Glcv19stats.Droid
 
         public override bool OnKeyUp([GeneratedEnum] Keycode keyCode, KeyEvent e)
         {
-            return base.OnKeyUp(keyCode, e);
+            var result = Ktos.GoogleGlass.GlassDpadHandler.InternalOnKeyUp((int)keyCode);
+            if (!result)
+                return base.OnKeyUp(keyCode, e);
+            else
+                return result;
         }
     }
 }

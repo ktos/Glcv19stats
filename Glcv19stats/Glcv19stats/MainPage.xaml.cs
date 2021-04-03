@@ -1,6 +1,8 @@
 ﻿using Humanizer;
+using Ktos.GoogleGlass;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
@@ -15,6 +17,14 @@ namespace Glcv19stats
             InitializeComponent();
 
             ShowCovidData();
+
+            GlassDpadHandler.KeyUp += GlassDpadHandler_KeyUp;
+        }
+
+        private void GlassDpadHandler_KeyUp(object sender, GlassDpadEventArgs e)
+        {
+            Debug.WriteLine("Keycode: " + e.KeyCode);
+            e.Handled = false;
         }
 
         public async void ShowCovidData()
